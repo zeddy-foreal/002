@@ -20,13 +20,11 @@ if (localStorage.tasks){
 
 mode_but.onclick = ()=>{
     if (mode === "dark"){
-        document.querySelectorAll(".wall")[0].style.opacity = 1;
-        document.querySelectorAll(".wall")[1].style.opacity = 0;
+
         change_colors(light)
         mode = "light"
     }else{
-        document.querySelectorAll(".wall")[0].style.opacity = 0;
-        document.querySelectorAll(".wall")[1].style.opacity = 1;
+
         change_colors(dark)
         mode = "dark"
     }
@@ -170,8 +168,14 @@ function makesure(){
     })
 }
 removeall.onclick = ()=>{
-    localStorage.removeItem("tasks")
-    task_array.length = 0
-    container.innerHTML = "";
+    task_array = task_array.filter((obj)=>{
+        return obj.check == false;
+    })
+    addtopage(task_array);
+    save();
     changenumber()
 }
+/*     localStorage.removeItem("tasks")
+task_array.length = 0
+container.innerHTML = "";
+changenumber() */
