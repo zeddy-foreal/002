@@ -6,7 +6,7 @@ let removeall = document.querySelector(".removeall");
 let input = document.querySelector(".input")
 let root = document.documentElement;
 let dark = ["#0e1221","#0f182a","#305756","#6abbd9","#00ffba", `<i class="fa-solid fa-sun"></i>`];
-let light = ["#91e0ef","#caf1f8","#03045e","#0077b7","#ff696c", `<i class="fa-solid fa-moon"></i>`];
+let light = ["#c6eeff","#caf1f8","#03045e","#00a6ff","#ff696c", `<i class="fa-solid fa-moon"></i>`];
 let mode = "dark";
 let mode_but = document.querySelector(".mode")
 // #####
